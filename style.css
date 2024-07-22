@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Barlow Semi Condensed';
+  font-size: 13px;
+  background-color: hsl(210, 46%, 95%);
+}
+
+@layer components {
+  .card {
+    @apply rounded-lg p-8;
+  }
+  .card-container-name {
+    @apply inline-grid grid-cols-[40px_1fr] gap-x-4 gap-y-0 mb-4;
+  }
+  .card-photo {
+    @apply rounded-full border-2 border-white/50 row-span-2 w-10 h-10;
+  }
+  .card-name {
+    @apply font-bold;
+  }
+  .card-edu {
+    @apply text-white/50;
+  }
+  .card-info {
+    @apply mb-4 text-2xl font-semibold;
+  }
+  .card-description {
+    @apply text-sm text-white/50 after:content-['“'] before:content-['“'];
+  }
+}
